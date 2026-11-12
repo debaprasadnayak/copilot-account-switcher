@@ -1,5 +1,5 @@
 {
-  "name": "copilot-account-switcher",
+  "name": "copilot-account-profile-switcher",
   "displayName": "Copilot Account Switcher",
   "description": "Shortcuts to Copilot account preferences and separate VS Code profiles. Not per-chat account isolation.",
   "version": "0.1.0",
@@ -42,7 +42,7 @@
   "scripts": {
     "check": "tsc --noEmit",
     "test": "node --test test/*.test.js",
-    "package": "vsce package --out copilot-account-switcher-0.1.0.vsix",
+    "package": "vsce package --out copilot-account-profile-switcher-0.1.0.vsix",
     "vscode:prepublish": "npm run check && npm test"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@ to a chat, transfer licenses, verify entitlements, or merge quotas.
 ## Install
 
 1. In VS Code, run **Extensions: Install from VSIX...**.
-2. Select `copilot-account-switcher-0.1.0.vsix` from this folder.
+2. Select `copilot-account-profile-switcher-0.1.0.vsix` from this folder.
 3. Enable GitHub Copilot Chat in the profile and sign in normally.
 4. Click **Copilot Accounts** in the status bar and choose your account.
 
