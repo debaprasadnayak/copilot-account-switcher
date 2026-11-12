@@ -4,7 +4,7 @@
   "description": "Shortcuts to Copilot account preferences and separate VS Code profiles. Not per-chat account isolation.",
   "version": "0.1.0",
   "publisher": "debaprasadnayak",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/debaprasadnayak/copilot-account-switcher.git"
@@ -42,7 +42,7 @@
   "scripts": {
     "check": "tsc --noEmit",
     "test": "node --test test/*.test.js",
-    "package": "vsce package --skip-license --out copilot-account-switcher-0.1.0.vsix",
+    "package": "vsce package --out copilot-account-switcher-0.1.0.vsix",
     "vscode:prepublish": "npm run check && npm test"
   },
   "devDependencies": {

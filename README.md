@@ -52,7 +52,7 @@ account Copilot is actually using.
 ## Compatibility and privacy
 
 Requires VS Code 1.96 or newer. This is an independent extension, not an official
-GitHub or Microsoft product. No open-source license is provided (`UNLICENSED`).
+GitHub or Microsoft product. Licensed under the [MIT License](./LICENSE).
 The minimum version is an engine baseline, not a guarantee that every built-in
 command exists on every build.
 
