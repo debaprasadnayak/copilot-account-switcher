@@ -1,0 +1,54 @@
+{
+  "name": "copilot-account-switcher",
+  "displayName": "Copilot Account Switcher",
+  "description": "Shortcuts to Copilot account preferences and separate VS Code profiles. Not per-chat account isolation.",
+  "version": "0.1.0",
+  "publisher": "debaprasadnayak",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/debaprasadnayak/copilot-account-switcher.git"
+  },
+  "homepage": "https://github.com/debaprasadnayak/copilot-account-switcher#readme",
+  "bugs": {
+    "url": "https://github.com/debaprasadnayak/copilot-account-switcher/issues"
+  },
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": ["Other"],
+  "main": "./extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "capabilities": {
+    "untrustedWorkspaces": { "supported": true },
+    "virtualWorkspaces": { "supported": true }
+  },
+  "contributes": {
+    "commands": [
+      { "command": "copilotAccounts.chooseAccount", "title": "Copilot Accounts: Choose Account for This Workspace/Profile" },
+      { "command": "copilotAccounts.menu", "title": "Copilot Accounts: Show Switching Options" },
+      { "command": "copilotAccounts.switchProfile", "title": "Copilot Accounts: Switch Profile in This Window" },
+      { "command": "copilotAccounts.newProfileWindow", "title": "Copilot Accounts: Open Separate Profile Window" },
+      { "command": "copilotAccounts.manageProfiles", "title": "Copilot Accounts: Create or Manage Profiles" }
+    ],
+    "keybindings": [
+      {
+        "command": "copilotAccounts.chooseAccount",
+        "key": "ctrl+alt+shift+a",
+        "mac": "cmd+alt+shift+a"
+      }
+    ]
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --test test/*.test.js",
+    "package": "vsce package --skip-license --out copilot-account-switcher-0.1.0.vsix",
+    "vscode:prepublish": "npm run check && npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "~1.96.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.7.0"
+  }
+}
