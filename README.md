@@ -1,4 +1,4 @@
-# Copilot Account Switcher
+# Copilot Account and Profile Shortcuts
 
 A VS Code extension with a status-bar button and keyboard shortcut to
 GitHub Copilot Chat's account preferences, plus profile/window shortcuts.
