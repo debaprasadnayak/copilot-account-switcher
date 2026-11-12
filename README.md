@@ -10,10 +10,26 @@ to a chat, transfer licenses, verify entitlements, or merge quotas.
 
 ## Install
 
-1. In VS Code, run **Extensions: Install from VSIX...**.
-2. Select `copilot-account-profile-switcher-0.1.0.vsix` from this folder.
-3. Enable GitHub Copilot Chat in the profile and sign in normally.
-4. Click **Copilot Accounts** in the status bar and choose your account.
+1. In VS Code, open **Extensions** with **Cmd+Shift+X** on macOS or
+   **Ctrl+Shift+X** on Windows/Linux.
+2. Search for `@id:debaprasadnayak.copilot-account-profile-switcher`.
+3. Select **Copilot Account and Profile Shortcuts** by **Deba Prasad Nayak**
+   and click **Install**. Review any publisher trust prompt before continuing.
+4. Install or enable **GitHub Copilot Chat** in the same profile and complete
+   its sign-in/setup. Each account you use must have a valid Copilot entitlement.
+5. Open your intended workspace, click **Copilot Accounts** in the status bar,
+   and choose the GitHub account to use for this workspace/profile.
+
+You can also open the [Visual Studio Marketplace listing](https://marketplace.visualstudio.com/items?itemName=debaprasadnayak.copilot-account-profile-switcher),
+click **Install**, allow your browser to open Visual Studio Code, and complete
+installation in VS Code. No repository clone or VSIX download is needed.
+
+Alternatively, open **Quick Open** with **Cmd+P** on macOS or **Ctrl+P** on
+Windows/Linux and enter:
+
+```text
+ext install debaprasadnayak.copilot-account-profile-switcher
+```
 
 The shortcut is **Cmd+Alt+Shift+A** on macOS or **Ctrl+Alt+Shift+A** on
 Windows/Linux. Change it in Keyboard Shortcuts if it conflicts with another tool.
@@ -23,7 +39,8 @@ The picker may also offer another sign-in; authentication is managed by VS Code.
 
 1. Run **Copilot Accounts: Create or Manage Profiles**.
 2. Create profiles such as **Work Copilot** and **Personal Copilot**.
-3. Install/enable GitHub Copilot Chat and this extension in both profiles.
+3. In each profile, use the Extensions view to install or enable GitHub Copilot
+   Chat and **Copilot Account and Profile Shortcuts**, following the steps above.
 4. Run **Copilot Accounts: Open Separate Profile Window** and select a profile.
 5. In each window, open the intended workspace, click **Copilot Accounts**, and
    select the intended GitHub account. Repeat for other workspaces as needed.
@@ -70,12 +87,27 @@ Each selected account needs its own valid Copilot entitlement. Organization
 policies and data-handling restrictions still apply, especially when switching
 from a work account to a personal account.
 
+## Updates and support
+
+VS Code normally updates Marketplace extensions automatically unless you have
+disabled automatic updates. To update manually, open the Extensions view, select
+this extension, and click **Update** when available.
+
+Report problems through [GitHub Issues](https://github.com/debaprasadnayak/copilot-account-switcher/issues).
+Include your VS Code version and the command that failed. Do not include tokens,
+private chat content, or other sensitive information.
+
 ## Development
 
 Requires Node.js 22+ and npm. Install dependencies with `npm install`, then use
 `npm run check`, `npm test`, and `npm run package`. Packaging also runs checks and
 tests. Open this folder in VS Code and press F5 to launch an Extension Development
 Host.
+
+VSIX installation is only needed for a local development build: run
+`npm run package`, then use **Extensions: Install from VSIX...** to select the
+generated package. Store users should follow the Marketplace installation steps
+above.
 
 Automated tests mock the VS Code boundary and cover dispatch, cancellation,
 unavailable commands, errors, and disposal. They do not validate real sign-in,
